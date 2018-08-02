@@ -1,19 +1,23 @@
-#include <stdio.h>
-int main()
+#include<stdio.h>
+void main()
 {
-    int a[10],b,c,i,j;
-    scanf("%d",&b);
-    for(i=0;i<b;i++)
+    int a[100],i,j,n;
+    printf("Enter the N:");
+    scanf("%d",&n);
+    printf("\n Enter the array:");
+    for(i=0;i<n;i++)
     {
-      scanf("%d",&a[i]);  
+        scanf("%d",&a[i]);
     }
-    for(i=0;i<b;i++)
-   { 
-       for(j=i+1;j<b;j++)
-       {
-           c=a[i]+a[j];
-       if(c>a[j]&&c<=a[b-1])
-       {printf("\n %d %d %d",a[i],a[j],c);
-       }}}
-    return 0;
+    printf("\n The numbers are:");
+    for(i=0;i<n-1;i++)
+    {
+        for(j=i;j<n;j++)
+        {
+            if(a[i]+a[j]==0)
+            {
+                printf("%d\t%d\n",a[i],a[j]);
+            }
+        }
+    }
 }
