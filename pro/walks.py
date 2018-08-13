@@ -1,5 +1,5 @@
-f1=1
-n1=int(input())
-for i in range(1,n1):
-	f1=f1*i
-print(f1)
+n=int(input("Enter a number"))
+f=1
+for i in range(1,n):
+	f=f*i
+print(f)
