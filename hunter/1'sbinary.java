@@ -1,45 +1,44 @@
-package JUNE;
-import java.util.Scanner;
-public class hunter20
-{
-
-	public static void main(String[] args) 
-	{
-		Scanner scan=new Scanner(System.in);
-		int bin=0,rem,base=1,n1,n2,count1=0,count2=0;
-		n1=scan.nextInt();n2=scan.nextInt();
-	    for(int i=n1;i<=n2;i++)
-	    {
-	    	int count=0;
-	    	int n3=i;
-	    	while(n3>0)
-	    	{
-	    		rem=n3%2;
-	    		if(rem==1)
-	    		   {count=count+1;}
-	    		
-	    		bin=bin+rem*base;
-	    		n3=n3/2;
-	    		base=base*10;
-	    		
-	    		
-	    	}//while
-	    	//System.out.print(count);
-	    	for(int i1=2;i1<=count;i1++)
-	    	{
-	    		
-	    		if(count%i1==0)
-	    			count1=count1+1;
-	    	}
-	    	//System.out.print(count1);
-	    	if(count1==1)
-	    		count2++;
-	    	count1=0;
-	    	
-	    }
-	    
-	    System.out.print(count2);
-	    
-	}
-
+package binaryrnge;
+import java.util.*;
+public class Binaryrnge {
+    public static void main(String[] args) {
+        Scanner scan=new Scanner(System.in);
+        int a=scan.nextInt();
+       int b=scan.nextInt();
+       int cot=0;
+        for(int i=a;i<b;i++)
+        {
+            int count=0,c=0,m=0,l=0;
+            l=i;
+            while(l>0)
+            {
+                c=l%2;
+                if(c==1)
+                {
+                    count++;
+                }
+                l=l/2;  
+                
+            }
+           
+            
+            for(int k=2;k<count;k++)
+            {
+                if((count%k)==0)
+                {
+                    m++;
+                }
+                 
+            }
+            if(m==0)
+            {
+            cot++;
+            }
+        }
+        System.out.println(cot);
+         
+        
+        
+    }
+    
 }
