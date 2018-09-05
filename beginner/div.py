@@ -1,12 +1,7 @@
-def main():
-	n=int(input())
-	while(True):
-		if n%2==0:
-			n//=2
-		else :
-			print(n)
-			break
-try:
-	main()
-except:
-	print('invalid')
+n=int(input())
+k=n
+while(n%2==0):
+    print(int(n/2))
+    n=n/2
+if(n==k):
+    print(n)
